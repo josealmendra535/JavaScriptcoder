@@ -13,7 +13,7 @@ let seguirComprando = true;
 
 while (Comprar) {
     let mensaje = "Favor ingresar el nombre del producto que deseas comprar";
-    for (let key in productosYPrecios) {
+    for (let === in productosYPrecios) {
     }
 }
 mensaje += "0. Muchas gracias por tu compra\n";
