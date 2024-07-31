@@ -1,40 +1,62 @@
 console.log("Tienda online de frutos secos")
 
-const productosYPrecios = {
-    1: { nombre: "ALMENDRAS EN CASCARA", precio: 2500 },
-    2: { nombre: "ALMENDRAS ENTERAS", precio: 8000 },
-    3: { nombre: "ALMENDRAS PARTIDAS", precio: 7000 },
-    4: { nombre: "NUECES MARIPOSA", precio: 8500 },
-    5: { nombre: "NUECES CUARTO", precio: 7000 }
-};
+const productosYPrecios = [
+    { id:1, nombre: "ALMENDRAS EN CASCARA", precio: 2500, stock: 1 },
+    { id:2, nombre: "ALMENDRAS ENTERAS", precio: 8000, stock: 2 },
+    { id:3, nombre: "ALMENDRAS PARTIDAS", precio: 7000, stock: 2 },
+    { id:4, nombre: "NUECES MARIPOSA", precio: 8500, stock: 2 },
+    { id:5, nombre: "NUECES CUARTO", precio: 7000, stock: 0 },
+];
 
+console.log(productosYPrecios.find(x => x.id === 2).precio);
 let seleccionados = [];
 let seguirComprando = true;
+let Comprar = true;
 
-while (Comprar) {
-    let mensaje = "Favor ingresar el nombre del producto que deseas comprar";
-    for (let === in productosYPrecios) {
-    }
-}
+let mensaje ="";
 mensaje += "0. Muchas gracias por tu compra\n";
 mensaje += "6. Estos son nuestros productos\n";
 mensaje += "7. Productos en stock\n";
 mensaje += "8. Productos en oferta";
 
 let mensajeDeBienvenida = "Bienvenid@"
+let descripcionProductos = "";
 
-let opcion = parseInt(prompt("¡Hola!, favor ingresar el nombre del producto que deseas comprar(ALMENDRAS EN CASCARA($2.500), ALMENDRAS ENTERAS($8.000), ALMENDRAS PARTIDAS($7.000), NUECES MARIPOSA($8.500), NUECES CUARTO($7.000)"))
-
-if (opcion === 0) {
-    alert("Muchas gracias por tu compra");
-} else if (opcion === 6) {
-    let mensaje = "Estos son nuestros productos\n\nALMENDRAS EN CASCARA($2.500)\nALMENDRAS ENTERAS($8.000)\n ALMENDRAS PARTIDAS($7.000)\nNUECES MARIPOSA($8.500)\nNUECES CUARTO($7.000)";
-} else if (opcion === 7) {
-    let mensaje = "Productos en stock:\n\nALMENDRAS ENTERAS($8.000)\nNUECES MARIPOSA($8.500)";
-} else if (opcion === 8) {
-    let mensaje = "Productos en oferta:\n\nNUECES CUARTO($7.000)"
+for (let i = 0; i < productosYPrecios.length; i++) {
+    descripcionProductos+= productosYPrecios[i].id +" "+ productosYPrecios[i].nombre +" Valor:"+productosYPrecios[i].precio +"\n";
+     //console.log(i+1 +" "+ productosYPrecios[i].nombre +"\n");
 }
+//console.log(descripcionProductos);
 
+let opcion = parseInt(prompt("¡Hola!, favor ingresar el número del producto que deseas comprar: \n"+descripcionProductos))
+console.log("Has elegido opcion " + opcion);
+
+//sumar Carrito
+seleccionados.push(opcion);
+
+// Falta descontar stock 
+let SeguirComprando = parseInt(prompt("Sumar otro producto? \n 1. Sí \n 2. No\n"));
+if(SeguirComprando == 1){
+    let opcion2 = parseInt(prompt("Ingresar el número del producto que deseas comprar: \n"+descripcionProductos))
+    console.log("Has elegido opcion " + opcion2);
+    seleccionados.push(opcion2);
+}
+console.log("Tu carrito: ");
+console.log("Carrito de productos seleccionados " + seleccionados);
+let precioFinal = 0;
+for (let item of seleccionados) {
+   //se buscar por el id del producto 
+   //console.log(productosYPrecios.find(x => x.id === item).precio);
+    precioFinal +=  productosYPrecios.find(x => x.id === item).precio;
+    }
+console.log("Tu precio Final: " + precioFinal);
+
+
+const boton = document.getElementbyId("btn-test");
+
+boton.addEventListener("click", () => alert("Probaste el botón"));
+
+console.log(productos);
 
 
 
