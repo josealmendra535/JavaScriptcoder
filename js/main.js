@@ -54,9 +54,35 @@ console.log("Tu precio Final: " + precioFinal);
 
 const boton = document.getElementbyId("btn-test");
 
-boton.addEventListener("click", () => alert("Probaste el botón"));
+// boton.addEventListener("click", () => alert("Probaste el botón"));
 
 console.log(productos);
 
+let objDeProductos= {
+    nombre: "Almendras en cascara",
+    origen: "Nacional",
+    formatos: "Envasados",
+    precio: 2500
+}
 
+console.log("Objeto de productos");
+console.log(objDeProductos)
 
+function Producto(nombre, origen, formatos, precio){
+    this.nombre = nombre;
+    this.origen = origen;
+    this.formatos = formatos;
+    this.precio = precio;
+}
+
+const primerProducto = new Producto("Almendras en cascara", "Nacional", "Envasados", "2500");
+const segundoProducto = new Producto("Almendras enteras", "Nacional", "Envasados", 8000);
+const tercerProducto = new Producto("Almendras partidas", "Nacional", "Envasados", 7000);
+const cuartoProducto = new Producto("Nueces mariposa", "Nacional", "Envasados", 8500);
+const quintoProducto =new Producto("Nueces cuarto", "Nacional", "Envasados", 7000);
+
+console.log(primerProducto);
+console.log(segundoProducto);
+console.log(tercerProducto);
+console.log(cuartoProducto);
+console.log(quintoProducto);
