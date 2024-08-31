@@ -20,6 +20,7 @@ let descripcionProductos = "";
     descripcionProductos += `${producto.id}. ${producto.nombre} - Valor: ${producto.precio}\n`;
 });
 
+// Declaración de array vacío
 let seleccionados = [];
 let seguirComprando = true;
 
@@ -86,3 +87,11 @@ console.log(quintoProducto);
 
 // Mostrar productosYPrecios
 productosYPrecios.forEach(producto => console.log(producto));
+
+//function de orden superior
+function productoAgregado(producto, agregado) {
+    console.log (`producto agregado a carrito ${producto}`);
+}
+
+//función de confirmación de producto
+function 
