@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "nombre": "Almendras En Cascara",
+    "precio": 2500,
+    "imagen": "assets/almendras.cascara.jpeg",
+    "stock": 1
+  },
+  {
+    "id": 2,
+    "nombre": "Almendras enteras",
+    "precio": 8000,
+    "imagen": "assets/almendras.enteras.png",
+    "stock": 2
+  },
+  {
+    "id": 3,
+    "nombre": "Almendras Partidas",
+    "precio": 7000,
+    "imagen": "assets/Almendras.partidas.png",
+    "stock": 4
+  },
+  {
+    "id": 4,
+    "nombre": "Nueces Mariposa",
+    "precio": 8500,
+    "imagen": "assets/nueces.mariposa.png",
+    "stock": 2
+  },
+  {
+    "id": 5,
+    "nombre": "Nueces Cuarto",
+    "precio": 7000,
+    "imagen": "assets/nueces.cuarto.png",
+    "stock": 5
+  }
+]
